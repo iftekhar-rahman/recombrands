@@ -1,0 +1,37 @@
+/*=========== Button CSS ==========*/
+
+.boxed-btn {
+    background-color: #225BAA;
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    z-index: 2;
+    border: 0;
+    @extend %body-font;
+    @extend %posrelative;
+    @extend %basetransition1;
+    @extend %white-color;
+    &:after {
+        @extend %pseudoabsolute;
+        background-color: #F3722A;
+        transform: scaleY(0);
+        @extend %basetransition1;
+    }
+    &:hover:after {
+        transform: scaleY(1);
+    }
+    &:hover {
+        @extend %white-color;
+    }
+}
+
+.bordered-btn {
+    border: 2px solid #2A7D2E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    background: transparent;
+    &:hover {
+        color: #154D32;
+    }
+}
